@@ -114,6 +114,9 @@
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "eslint-config-airbnb",
+    "env": {
+      "browser": true
+    },
     "rules": {
       "class-methods-use-this": "off",
       "comma-dangle": ["warn", "always-multiline"],
