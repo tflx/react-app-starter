@@ -11,14 +11,15 @@ import 'whatwg-fetch';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-
-import store from './core/store';
+import './polyfills';
+import configureStore from './store/configureStore';
 import router from './core/router';
 import history from './core/history';
 
 let routes = require('./routes.json'); // Parsed by using `utils/routes-loader.js`
 
-const container = document.getElementById('root');
+const store = configureStore();
+const container = global.document.getElementById('root');
 
 function renderComponent(component) {
   ReactDOM.render(<Provider store={store}>{component}</Provider>, container);

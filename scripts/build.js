@@ -7,6 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
+process.env.NODE_ENV = 'production';
 const run = require('../run');
 
 module.exports = () => Promise.resolve()

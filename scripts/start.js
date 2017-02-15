@@ -10,6 +10,7 @@
 const fs = require('fs');
 const ejs = require('ejs');
 const webpack = require('webpack');
+process.env.NODE_ENV = 'development';
 
 module.exports = () => {
   let count = 0;

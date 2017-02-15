@@ -14,7 +14,7 @@ const webpack = require('webpack');
 const AssetsPlugin = require('assets-webpack-plugin');
 
 const pkg = require(path.resolve(process.cwd(), './package.json'));
-
+console.log(process.env.NODE_ENV);
 const debug = process.env.NODE_ENV === 'development';
 const verbose = process.env.VERBOSE === 'true';
 const hmr = process.env.HMR === 'true';

@@ -30,7 +30,6 @@ function decodeParam(val) {
 //   matchURI({ path: '/posts/:id' }, '/dummy') => null
 //   matchURI({ path: '/posts/:id' }, '/posts/123') => { id: 123 }
 function matchURI(route, path) {
-  console.log(route);
   const match = route.pattern.exec(path);
 
   if (!match) {
